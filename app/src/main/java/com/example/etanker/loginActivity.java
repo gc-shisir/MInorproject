@@ -241,5 +241,13 @@ public class loginActivity extends AppCompatActivity {
             });
 
         }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(fAuth.getCurrentUser()!=null){
+            startActivity(new Intent(getApplicationContext(),supplierDashboard.class));
+        }
+    }
 }
 
